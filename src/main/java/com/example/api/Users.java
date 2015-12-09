@@ -10,24 +10,21 @@ import java.util.List;
  */
 @Path("/users")
 @Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
 public final class Users {
 
-    private static final List<User> USERS = new ArrayList<User>();
-
-    static {
-        USERS.add(new User().setName("Daniel Oskarsson").setUsername("danieloskarsson").setPassword("password"));
-        USERS.add(new User().setName("Test Testsson").setUsername("testtestsson").setPassword("testing"));
-    }
+    private static List<User> list = new ArrayList<>();
 
     @GET
-    public List<User> getUsers() {
-        return USERS;
+    public List<User> listUsers() {
+        // Jersey will automatically set the response code to 200 and transform List<User> to JSON
+        return list;
     }
 
     @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    public void addUser(final User user) {
-        USERS.add(user);
+    public void postUser(final User user) {
+        list.add(user);
+        // Since this method returns void, Jersey will set the response code to 204.
     }
 
 }

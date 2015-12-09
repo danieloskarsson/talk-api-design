@@ -5,34 +5,24 @@ package com.example.api;
  */
 public final class User {
 
-    private String name;
-    private String username;
-    private String password;
+    private String userName;
+    private String realName;
 
-    public String getName() {
-        return name;
+    public String getRealName() {
+        return realName;
     }
 
-    public User setName(final String name) {
-        this.name = name;
+    public User setRealName(final String realName) {
+        this.realName = realName;
         return this;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
-    public User setUsername(final String username) {
-        this.username = username;
-        return this;
-    }
-
-    String getPassword() {
-        return password;
-    }
-
-    User setPassword(final String password) {
-        this.password = password;
+    public User setUserName(final String userName) {
+        this.userName = userName;
         return this;
     }
 
