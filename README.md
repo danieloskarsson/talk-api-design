@@ -7,7 +7,7 @@ You need Maven 3 and Java 1.8 to run the DEMO.
 
 `mvn clean jetty:run-war`
 
-Press Ctrl+C to stop the server from running.
+Press `Ctrl+C` to stop the server from running.
 
 
 Invoke requests and receive responses using cURL or a similar tool:
@@ -34,7 +34,7 @@ Hello World
 
 `curl -s -v -X GET http://localhost:8080/`
 
--X GET is default in curl
+`-X GET` is default in [cURL](http://curl.haxx.se/)
 
 ```
 *   Trying ::1...
@@ -76,7 +76,7 @@ Hello World
 
 `curl -s -v -H "Accept: application/json" -H "Content-Type: application/json" -X POST http://localhost:8080/users -d @user.json`
 
-Sending JSON, Requesting JSON, POSTing the contents of the file user.json
+Sending JSON, Requesting JSON, POSTing the contents of the file `user.json`
 
 ```
 *   Trying ::1...
@@ -103,7 +103,7 @@ The server generates and automatically returns the ID
 
 `curl -s -v  -H "Accept: application/json" http://localhost:8080/users`
 
-Explicitly asking for JSON when doing GET so that the server cannot respond with anything else
+Explicitly asking for JSON when doing `GET` so that the server cannot respond with anything else
 
 ```
 *   Trying ::1...
@@ -125,7 +125,7 @@ Explicitly asking for JSON when doing GET so that the server cannot respond with
 
 `curl -s -v  -H "Accept: application/json" http://localhost:8080/users | jq .`
 
-Pretty printing and much more is possible with ./jq
+Pretty printing and much more is possible with [`./jq`](https://stedolan.github.io/jq/)
 
 ```
 *   Trying ::1...
@@ -154,7 +154,7 @@ Pretty printing and much more is possible with ./jq
 
 `curl -s -v  -X DELETE http://localhost:8080/users/c710cc61-03fc-479b-9143-65750d4add5d`
 
-Deleting the user with id c710cc61-03fc-479b-9143-65750d4add5d
+Deleting the user with id `c710cc61-03fc-479b-9143-65750d4add5d`
 
 ```
 *   Trying ::1...
