@@ -14,7 +14,7 @@ import java.util.List;
 @Consumes(MediaType.APPLICATION_JSON)
 public final class Users {
 
-    private static List<User> list = new ArrayList<>();
+    private static List<User> list = new ArrayList<User>();
 
     @GET
     public List<User> listUsers() {
