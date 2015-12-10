@@ -22,9 +22,11 @@ public final class Users {
     }
 
     @POST
-    public void postUser(final User user) {
+    public User postUser(final User user) {
         list.add(user);
-        // Since this method returns void, Jersey will set the response code to 204.
+
+        // Return the user, including the Server generated UUID
+        return user;
     }
 
 }
